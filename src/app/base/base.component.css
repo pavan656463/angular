@@ -7,6 +7,7 @@
     height:800px ; 
     border-radius: 2em ; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border:none ; 
   }
 
   .head:hover{
