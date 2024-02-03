@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './form.component.css'
 })
 export class FormComponent {
-  name:string = "Pavan" ; 
+  name:string = "Pavan" ;// calling the dtring string interpolation  
+  status:string = "online" ;   //calling through function 
+  
+  getStatus(){ 
+    return this.status ; 
+  }
 }
