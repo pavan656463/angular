@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Calc } from '../module/add';
 
 @Component({
   selector: 'app-form',
@@ -10,6 +11,7 @@ export class FormComponent {
   status:string = "online" ;   //calling through function 
   
   getStatus(){ 
-    return this.status ; 
+    const calculator = new Calc() ; 
+    return calculator.getAdd(5,6)
   }
 }
