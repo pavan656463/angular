@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Calc } from '../module/add';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { details } from '../module/formAction';
 
 @Component({
   selector: 'app-form',
@@ -14,4 +16,17 @@ export class FormComponent {
     const calculator = new Calc() ; 
     return calculator.getAdd(5,6)
   }
+
+  myForm: FormGroup ;
+
+  constructor(fb:FormBuilder){
+    this.myForm= details.getdetails(fb)
+  }
+
+
+  onSubmit(){ 
+    alert("Username : " + this.myForm.value.username);
+  }
+
+
 }

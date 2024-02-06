@@ -1,3 +1,12 @@
 <p>{{ name }}</p>
 <br>
 <p>Server status : {{ getStatus()}}</p>
+
+<app-task></app-task>
+
+<form [formGroup] = "myForm"  (ngSubmit)="onSubmit()">
+    <label for="username">Username:</label>
+    <input type="text" id="username" formControlName="username">
+    
+    <button type="submit">Submit</button>
+</form>
